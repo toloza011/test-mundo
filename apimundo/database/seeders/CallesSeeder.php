@@ -127,6 +127,7 @@ class CallesSeeder extends Seeder
            [4,'Santiago',23],
            [5,'Valparaíso',18],
            [6, 'Viña del Mar',18],
+           [7,'Lebu',40]
         ];
 
         $ciudades = array_map(function($ciudad){

@@ -9,7 +9,7 @@ export const DataProvider = ({children}) => {
      
     const [data, setdata] = useState(calles)
 
-     return (
+    return (
         <DataContext.Provider value={{data,setdata}}>
             {children}
         </DataContext.Provider>

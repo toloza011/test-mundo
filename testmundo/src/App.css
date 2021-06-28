@@ -6,13 +6,12 @@
 }
 
 body {
-  background: #b8b8b8;
   height: 100vh;
   
 }
 .main{
+  background-color: #fffefe;
   height: 100vh;
- 
 }
 
 .main__container{

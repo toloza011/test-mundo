@@ -13,17 +13,16 @@ function App() {
       <div className="main">
         <div className="main__container">
          <div className="row ">
-         <Col lg="6" xs="12" md="12" xl="6" >
+          <Col lg="6" xs="12" md="12" xl="6" >
               <Filtros />
             </Col>
             <Col lg="6" xs="12"  xl="6">
               <Resultados />
-            </Col>
+          </Col>
          </div>
         </div>
       </div>
     </DataProvider>
-
   );
 }
 
