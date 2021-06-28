@@ -77,7 +77,6 @@ export const Filtros = () => {
     setProvincia(id_provincia);
     setciudades([]);
     setCiudad(0);
-    setdata([]);
 
     if (id_provincia > 0) {
       const data = fetch(
@@ -108,6 +107,8 @@ export const Filtros = () => {
   const buscarCalles = (e) => {
     e.preventDefault();
 
+    setIsLoading(true);
+
     if (provinciaSelected != 0 && ciudadSelected != 0 && regionselected != 0) {
       const data = fetch(
         `http://apimundo.localhost/api/calles/${ciudadSelected}`
@@ -119,6 +120,7 @@ export const Filtros = () => {
 
         .then((data) => {
           console.log(data);
+          setIsLoading(false);
           if (data.calles && data.calles.length > 0) {
             console.log(data);
             setdata({ calles: data.calles });
@@ -138,6 +140,8 @@ export const Filtros = () => {
           }
         })
         .catch((err) => {
+          setIsLoading(false);
+
           SwalAlert.fire({
             icon: "error",
             title: "Oops...",
@@ -145,6 +149,7 @@ export const Filtros = () => {
           });
         });
     } else {
+      setIsLoading(false);
       SwalAlert.fire({
         icon: "error",
         title: "Oops...",
@@ -179,7 +184,7 @@ export const Filtros = () => {
               {provincias.length > 0 &&
                 provincias.map((provincia) => (
                   <option key={provincia.id} value={provincia.id}>
-                    {" "}
+             
                     {provincia.prov_nombre}
                   </option>
                 ))}
@@ -195,7 +200,7 @@ export const Filtros = () => {
               {ciudades.length > 0 &&
                 ciudades.map((ciudad) => (
                   <option key={ciudad.id} value={ciudad.id}>
-                    {" "}
+                    
                     {ciudad.ciu_nombre}
                   </option>
                 ))}

@@ -38,7 +38,7 @@ class ApiController extends Controller
                     'message' => "Su busqueda no ha arrojado resultados"
                 ]);
             }
-        }else{
+        } else {
             return response()->json([
                 'status' => 500,
                 'message' => "El campo region es requerido"
@@ -62,7 +62,7 @@ class ApiController extends Controller
                     'message' => "Su busqueda no ha arrojado resultados"
                 ]);
             }
-        }else{
+        } else {
             return response()->json([
                 'status' => 500,
                 'message' => "El campo provincia es requerido"
@@ -81,13 +81,12 @@ class ApiController extends Controller
                     'calles' => $calles
                 ]);
             } else {
-
                 return response()->json([
                     'status' => 404,
                     'message' => "Su busqueda no ha arrojado resultados"
                 ]);
             }
-        }else{
+        } else {
             return response()->json([
                 'status' => 500,
                 'message' => "El campo ciudad es requerido"

@@ -4,6 +4,7 @@ import { ListGroup, Table } from "react-bootstrap";
 import { DataContext } from "../providers/DataProvider";
 
 export const Resultados = () => {
+  
   const { data } = useContext(DataContext);
 
   const [street, setstreets] = useState([]);
@@ -17,15 +18,15 @@ export const Resultados = () => {
       <Table striped bordered hover>
         <thead>
           <tr>
-            <th>ID</th>
-            <th>Calle</th>
+           {/*  <th>ID</th> */}
+            <th className="text-center">Calles</th>
           </tr>
         </thead>
         <tbody>
           {street && street.length > 0 ? (
             street.map((calle) => (
               <tr key={calle.id}>
-                <td >{calle.id}</td>
+             {/*    <td >{calle.id}</td> */}
                 <td>{calle.nombre}</td>
               </tr>
             ))

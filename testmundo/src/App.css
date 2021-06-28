@@ -16,15 +16,15 @@ body {
 
 .main__container{
   height: 100%;
-  width: 100vw;
+  width: 100%;
 }
 
 
 .container__filtros{
-  margin-top: 100px;
+ 
   height: 100%;
-  width: 100%;
-  
+  width: 100%; 
+  padding-top: 100px; 
 }
 .main_filtros{
   height: 100%;
@@ -33,10 +33,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: space-around;
+  
 }
 
 .container__results{
-  margin-top: 100px;
+  padding-top: 100px;
   height: 100%;
   width: 100%;
   padding: 10px;
@@ -49,9 +50,11 @@ body {
 .list{
   width: 100%;
   padding: 0;
+
 }
 .row{
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  
 }

@@ -12,13 +12,16 @@ function App() {
     <DataProvider>
       <div className="main">
         <div className="main__container">
-         <div className="row ">
-          <Col lg="6" xs="12" md="12" xl="6" >
+        <div className="text-center flex flex-column ">
+             <img src="mundo.png" className="mt-4" height="120px" width="500px"   />
+          </div> 
+         <div className="row">
+            <Col lg="6" xs="12" md="12" xl="6" >
               <Filtros />
             </Col>
             <Col lg="6" xs="12"  xl="6">
-              <Resultados />
-          </Col>
+              <Resultados  />
+           </Col>
          </div>
         </div>
       </div>
