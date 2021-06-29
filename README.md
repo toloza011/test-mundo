@@ -2,7 +2,7 @@
 
 ## Documentación
 
-- [Traducción de la documentación oficial](https://laravel.com/docs/8.x)
+- [Documentación oficial de Laravel](https://laravel.com/docs/8.x)
 
 
 ## Prerrequisitos
