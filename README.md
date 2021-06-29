@@ -57,6 +57,8 @@ Esto abrira la aplicación en su navegador.
 - VIII Región - Provincia Concepción - Ciudad de Concepción.
 - VIII Región - Provincia Arauco - Ciudad de Arauco.
 - Región Metropolitana - Provincia de Santiago - Ciudad de Santiago.
+- V Región - Provincia Valparaíso - Ciudad de Valparaíso
+- V Región - Provincia Valparaíso - Ciudad de Viña del Mar
 
 
 
