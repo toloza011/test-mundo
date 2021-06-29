@@ -24,7 +24,7 @@ export const Filtros = () => {
   }, []);
 
   const cargarRegiones = () => {
-    const data = fetch("http://apimundo.localhost/api/regiones")
+    const data = fetch("http://127.0.0.1:8000/api/regiones")
       .then((res) =>
         //convertir respuesta a tipo json
         res.json()
@@ -47,7 +47,7 @@ export const Filtros = () => {
     setRegion(id_region);
     if (id_region > 0) {
       const data = fetch(
-        `http://apimundo.localhost/api/provincias/${id_region}`
+        `http://127.0.0.1:8000/api/provincias/${id_region}`
       )
         .then((res) =>
           //convertir respuesta a tipo json
@@ -80,7 +80,7 @@ export const Filtros = () => {
 
     if (id_provincia > 0) {
       const data = fetch(
-        `http://apimundo.localhost/api/ciudades/${id_provincia}`
+        `http://127.0.0.1:8000/api/ciudades/${id_provincia}`
       )
         .then((res) =>
           //convertir respuesta a tipo json
@@ -111,7 +111,7 @@ export const Filtros = () => {
 
     if (provinciaSelected != 0 && ciudadSelected != 0 && regionselected != 0) {
       const data = fetch(
-        `http://apimundo.localhost/api/calles/${ciudadSelected}`
+        `http://127.0.0.1:8000/api/calles/${ciudadSelected}`
       )
         .then((res) =>
           //convertir respuesta a tipo json
@@ -166,9 +166,9 @@ export const Filtros = () => {
         </div>
         <Form>
           <Form.Group>
-            <Form.Label>Region: </Form.Label>
+            <Form.Label>Región: </Form.Label>
             <Form.Control as="select" onChange={(e) => cargarProvincias(e)}>
-              <option value="0">Selecciona una Region</option>
+              <option value="0">Selecciona una Región</option>
               {regiones.length > 0 &&
                 regiones.map((region) => (
                   <option key={region.id} value={region.id}>
