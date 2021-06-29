@@ -1,48 +1,64 @@
-
 # Test Desarrollador Inicial Mundo
 
 ## Documentación
 
-- [Traducción de la documentación oficial](https://docs.laraveles.com/docs/5.5)
+- [Traducción de la documentación oficial](https://laravel.com/docs/8.x)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
-## Learning Laravel
+## Prerrequisitos
+- **[Composer](https://getcomposer.org)**
+- **[NodeJs](https://nodejs.org/es/)**
+- **[Git](https://git-scm.com/downloads)**
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+# Instalación
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## Clonar Proyecto 
 
-## Laravel Sponsors
+Ejecutar el comando `git clone https://github.com/toloza011/test-mundo.git`
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+## Instalar dependencias en Laravel
 
-### Premium Partners
+Desde el directorio apimundo, ejecutar el comando `composer install`
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
+## Configurar Variables de entorno
 
-## Contributing
+Desde el directorio apimundo, ejecutar el comando `cp .env.example .env` para crear el archivo de configuración del entorno de desarrollo.
+Luego de generar el archivo es necesario crear una base de datos y modificar las credenciales de acceso en el archivo `.env`.
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+Las variables a modificar son las siguientes : 
+- DB_CONNECTION=mysql
+- DB_HOST=127.0.0.1
+- DB_PORT=3306
+- DB_DATABASE=nombre-base-de-datos
+- DB_USERNAME=root
+- DB_PASSWORD=contraseña
 
-## Code of Conduct
+## Generar clave de seguridad de la aplicación
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+Ejecutar `php artisan key:generate`
 
-## Security Vulnerabilities
+## Migrar y seedear la base de datos 
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+Para ejecutar las migraciones y poblar la base de datos ejecutar: `php artisan migrate:fresh --seed`
 
-## License
+## Ejecutar API
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+Para correr la aplicación ejecutar: `php artisan serve` 
+Esto dejara corriendo la api en el puerto de su localhost.
+
+## Ejecutar aplicación en ReactJs
+
+Desde el directorio testmundo, ejecutar : `npm start`
+Esto abrira la aplicación en su navegador.
+
+## Datos de prueba 
+
+- VIII Región - Provincia Biobío - Ciudad de los angeles.
+- VIII Región - Provincia Concepción - Ciudad de Concepción.
+- VIII Región - Provincia Arauco - Ciudad de Arauco.
+- Región Metropolitana - Provincia de Santiago - Ciudad de Santiago.
+- V Región - Provincia Valparaíso - Ciudad de Valparaíso
+- V Región - Provincia Valparaíso - Ciudad de Viña del Mar
+
+
+
