@@ -49,8 +49,8 @@ Esto dejara corriendo la api en el puerto de su localhost.
 ## Ejecutar aplicación en ReactJs
 
 Abrir otra consola y desde el directorio testmundo, ejecutar : `npm install`. 
-Esto instalara las dependencias necesarias para el proyecto. Luego de finalizar ejecutar: `npm start`, esto abrira la aplicación en su navegador.
-
+Esto instalará las dependencias necesarias para el proyecto. Luego de finalizar ejecutar: `npm start`, esto abrirá la aplicación en su navegador.
+En caso de no cargar los datos en la aplicación verificar que el puerto corriendo en laravel sea el mismo que el de la aplicación en ReactJs.
 
 ## Datos de prueba 
 
