@@ -48,7 +48,7 @@ Esto dejara corriendo la api en el puerto de su localhost.
 
 ## Ejecutar aplicación en ReactJs
 
-Desde el directorio testmundo, ejecutar : `npm start`
+Abrir otra consola y desde el directorio testmundo, ejecutar : `npm start`
 Esto abrira la aplicación en su navegador.
 
 ## Datos de prueba 
